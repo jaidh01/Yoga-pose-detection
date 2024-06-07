@@ -1,6 +1,6 @@
 # Yoga Pose Detection with OpenCV and Mediapipe
 
-Welcome to the Yoga Pose Detection repository! This project utilizes OpenCV and Mediapipe to detect and classify various yoga poses from live video feeds or recorded videos. The aim is to provide a tool for users to practice yoga with real-time feedback on their poses.
+Welcome to the Yoga Pose Detection repository! This project utilizes OpenCV and Mediapipe to detect and classify various yoga poses from live video feeds or static images. The aim is to provide a tool for users to practice yoga with real-time feedback on their poses.
 
 ## Table of Contents
 - [Features](#features)
