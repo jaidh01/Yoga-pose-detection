@@ -38,7 +38,7 @@ The current version of the project supports the following yoga poses:
 - Tree Pose (Vrikshasana)
 - T Pose
 
-The list of poses can be expanded by adding new pose definitions in the `pose.py` file.
+The list of poses can be expanded by adding new pose definitions in 'classifyPose' function in yoga_pose_detection.ipynb.
 
 ## Acknowledgements
 This project is built on top of the amazing [Mediapipe](https://mediapipe.dev/) framework by Google and the versatile [OpenCV](https://opencv.org/) library. Special thanks to the contributors and maintainers of these projects.
