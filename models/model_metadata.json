@@ -1,0 +1,12 @@
+{
+    "model_version": "v4.0",
+    "n_features": 132,
+    "n_classes": 3,
+    "classes": [
+        "down",
+        "front",
+        "up"
+    ],
+    "training_date": "2025-02-08 15:56:03",
+    "test_accuracy": 0.9834651350975037
+}

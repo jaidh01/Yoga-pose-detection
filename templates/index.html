@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-time Pose Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+        .video-box {
+            flex: 1;
+            min-width: 320px;
+            max-width: 640px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #videoElement {
+            display: none;
+        }
+        #inputCanvas, #outputCanvas {
+            width: 100%;
+            height: auto;
+            max-width: 640px;
+            max-height: 480px;
+            background: #000;
+            border-radius: 4px;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        .controls button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .controls button:hover {
+            background-color: #45a049;
+        }
+        .controls button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .status {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #444;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 1200px) {
+            .video-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .video-box {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-time Pose Detection</h1>
+
+    <div class="controls">
+        <button id="startCamera">Start Camera</button>
+        <button id="stopCamera" disabled>Stop Camera</button>
+    </div>
+    
+    <div class="video-container">
+        <div class="video-box">
+            <h2>Camera Input</h2>
+            <canvas id="inputCanvas"></canvas>
+            <div class="status" id="inputStatus">Camera not started</div>
+        </div>
+        <div class="video-box">
+            <h2>Pose Detection</h2>
+            <canvas id="outputCanvas"></canvas>
+            <div class="status" id="outputStatus">Processing not started</div>
+        </div>
+    </div>
+
+    <!-- Hidden video element for camera stream -->
+    <video id="videoElement" autoplay playsinline></video>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
